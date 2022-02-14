@@ -15,12 +15,12 @@ metadata:
   namespace: {{ . }}
 {{- end }}
 rules:
-{{ if has "certificatesigningrequests" $.Values.collectors }}
-- apiGroups: ["certificates.k8s.io"]
-  resources:
-  - certificatesigningrequests
-  verbs: ["list", "watch"]
-{{ end -}}
+# {{ if has "certificatesigningrequests" $.Values.collectors }}
+# - apiGroups: ["certificates.k8s.io"]
+#   resources:
+#   - certificatesigningrequests
+#   verbs: ["list", "watch"]
+# {{ end -}}
 {{ if has "configmaps" $.Values.collectors }}
 - apiGroups: [""]
   resources:
